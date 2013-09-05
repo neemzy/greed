@@ -1,0 +1,42 @@
+@max-cols: 16;
+@gutter: 10px;
+
+.make-cols(@cols) {
+    .subloop(@i) when (@i > 0) {
+        (~".col-@{i}") {
+            width: 100% / @cols * @i;
+        }
+
+        .subloop(@i - 1);
+    }
+
+    .subloop(0) {}
+    .subloop(@cols);
+}
+
+.greed {
+    &, [class^="col-"] {
+        padding: (@gutter / 2);
+    }
+
+    [class^="col-"] {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1rem;
+    }
+
+    [class^="row-"] {
+        font-size: 0;
+    }
+
+    .loop(@i) when (@i > 0) {
+        (~".row-@{i}") {
+            .make-cols(@i);
+        }
+
+        .loop(@i - 1);
+    }
+
+    .loop(0) {}
+    .loop(@max-cols);
+}
