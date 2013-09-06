@@ -1,42 +1,40 @@
-@max-cols: 16;
-@gutter: 10px;
+.init-greed(@max-cols: 16, @gutter: 10px) {
+    .make-cols(@cols) {
+        .subloop(@i) when (@i > 0) {
+            (~".col-@{i}") {
+                width: 100% / @cols * @i;
+            }
 
-.make-cols(@cols) {
-    .subloop(@i) when (@i > 0) {
-        (~".col-@{i}") {
-            width: 100% / @cols * @i;
+            .subloop(@i - 1);
         }
 
-        .subloop(@i - 1);
+        .subloop(0) {}
+        .subloop(@cols);
     }
 
-    .subloop(0) {}
-    .subloop(@cols);
-}
-
-.greed {
-    &, [class^="col-"] {
+    .greed {
         padding: (@gutter / 2);
-    }
 
-    [class^="col-"] {
-        display: inline-block;
-        vertical-align: top;
-        font-size: 1rem;
-    }
-
-    [class^="row-"] {
-        font-size: 0;
-    }
-
-    .loop(@i) when (@i > 0) {
-        (~".row-@{i}") {
-            .make-cols(@i);
+        [class^="col-"] {
+            display: inline-block;
+            vertical-align: top;
+            margin: (@gutter / 2);
+            font-size: 1rem;
         }
 
-        .loop(@i - 1);
-    }
+        [class^="row-"] {
+            font-size: 0;
+        }
 
-    .loop(0) {}
-    .loop(@max-cols);
+        .loop(@i) when (@i > 0) {
+            (~".row-@{i}") {
+                .make-cols(@i);
+            }
+
+            .loop(@i - 1);
+        }
+
+        .loop(0) {}
+        .loop(@max-cols);
+    }
 }
