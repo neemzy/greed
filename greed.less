@@ -1,4 +1,4 @@
-.init-greed(@max-cols: 16, @gutter: 10px) {
+.init-greed(@max-cols: 12, @gutter: 0) {
     .make-cols(@cols) {
         .subloop(@i) when (@i > 0) {
             (~".col-@{i}") {
@@ -26,6 +26,24 @@
             font-size: 0;
         }
 
+        .row-left {
+            text-align: left;
+        }
+
+        .row-center {
+            text-align: center;
+        }
+
+        .row-right {
+            text-align: right;
+        }
+
+        &.no-hack {
+            [class^="col-"], [class^="row-"] {
+                font-size: inherit;
+            }
+        }
+
         .loop(@i) when (@i > 0) {
             (~".row-@{i}") {
                 .make-cols(@i);
@@ -36,5 +54,14 @@
 
         .loop(0) {}
         .loop(@max-cols);
+    }
+}
+
+.to-row {
+    display: block !important;
+    width: 100% !important;
+
+    & + .to-row {
+        margin-top: @gutter;
     }
 }

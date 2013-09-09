@@ -3,10 +3,6 @@ greed
 
 ## LESS-generated fluid grid system
 
-This project is still a work in progress, and more of a proof of concept (more about this below).
-
-## Concept
-
 **greed** is meant to be used as a LESS mixin :
 
 ```less
