@@ -3,7 +3,7 @@ greed
 
 ## LESS-generated fluid grid system
 
-**greed** is meant to be used as a LESS mixin :
+**Greed** is meant to be used as a LESS mixin :
 
 ```less
 .init-greed(12, 10px); // amount of columns (default : 12), gutter size (default : 0)
@@ -59,7 +59,7 @@ With a grid system being that adaptable, it was pretty hard to define fixed brea
 }
 ```
 
-This rule sets `display: block;` and `width: 100%;` to the target `.col-*` block, and gives the second and above of them some top margin to recreate the gutters.
+This rule sets `display: block;` and `width: 100%;` to the target `.col-*` blocks, and gives the second and above of them some top margin to recreate the gutters between the original rows.
 
 ## Enjoy !
 
