@@ -6,7 +6,7 @@ greed
 **Greed** is meant to be used as a LESS mixin :
 
 ```less
-.init-greed(12, 10px); // amount of columns (default : 12), gutter size (default : 0)
+.greed(12, 10px); // amount of columns (default : 12), gutter size (default : 0)
 ```
 
 This will add rules to your stylesheet. Read on to see how to use them !
