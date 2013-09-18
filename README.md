@@ -6,6 +6,14 @@ greed
 **Greed** is meant to be used as a LESS mixin :
 
 ```less
+// You use this, right ?
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .greed(12, 10px); // amount of columns (default : 12), gutter size (default : 0)
 ```
 
