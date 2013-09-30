@@ -24,8 +24,8 @@ This will add rules to your stylesheet. Read on to see how to use them !
 ```html
 <div class="greed">
     <div class="row-4"> <!-- row of 4 columns -->
-        <div class="col-1"> <!-- single column -->
-        <div class="col-3"> <!-- triple column -->
+        <div class="col-1"></div> <!-- single column -->
+        <div class="col-3"></div> <!-- triple column -->
     </div>
 </div>
 ```
@@ -37,12 +37,12 @@ This also means you can easily alternate different types of columns :
 ```html
 <div class="greed">
     <div class="row-7">
-        <div class="col-3">
-        <div class="col-4">
+        <div class="col-3"></div>
+        <div class="col-4"></div>
     </div>
     <div class="row-11">
-        <div class="col-5">
-        <div class="col-6">
+        <div class="col-5"></div>
+        <div class="col-6"></div>
     </div>
 </div>
 ```
