@@ -1,7 +1,7 @@
 .greed(@max-cols: 12, @gutter: 0) {
     .make-cols(@cols) {
         .subloop(@i) when (@i > 0) {
-            (~".col-@{i}") {
+            .col-@{i} {
                 width: 100% / @cols * @i;
             }
 
@@ -18,17 +18,8 @@
         [class^="col-"] {
             display: inline-block;
             vertical-align: top;
-            margin: (@gutter / 2);
+            padding: (@gutter / 2);
             font-size: 1rem;
-        }
-        
-        .to-row {
-            display: block !important;
-            width: 100% !important;
-        
-            & + .to-row {
-                margin-top: @gutter;
-            }
         }
 
         [class^="row-"] {
@@ -54,7 +45,7 @@
         }
 
         .loop(@i) when (@i > 0) {
-            (~".row-@{i}") {
+            .row-@{i} {
                 .make-cols(@i);
             }
 
@@ -64,4 +55,9 @@
         .loop(0) {}
         .loop(@max-cols);
     }
+}
+        
+.to-row {
+    display: block !important;
+    width: 100% !important;
 }
