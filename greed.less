@@ -21,6 +21,15 @@
             margin: (@gutter / 2);
             font-size: 1rem;
         }
+        
+        .to-row {
+            display: block !important;
+            width: 100% !important;
+        
+            & + .to-row {
+                margin-top: @gutter;
+            }
+        }
 
         [class^="row-"] {
             font-size: 0;
@@ -54,14 +63,5 @@
 
         .loop(0) {}
         .loop(@max-cols);
-    }
-}
-
-.to-row {
-    display: block !important;
-    width: 100% !important;
-
-    & + .to-row {
-        margin-top: @gutter;
     }
 }
