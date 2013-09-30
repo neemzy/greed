@@ -67,7 +67,7 @@ With a grid system being that adaptable, it was pretty hard to define fixed brea
 }
 ```
 
-This rule sets `display: block;` and `width: 100%;` to the target `.col-*` blocks, and gives the second and above of them some top margin to recreate the gutters between the original rows.
+This rule sets `display: block;` and `width: 100%;` to the target `.col-*` blocks.
 
 ## Enjoy !
 
