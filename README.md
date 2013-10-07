@@ -55,7 +55,7 @@ It implies the use of a kinda ugly `font-size: 0;` hack to collapse the gap betw
 
 ## Responsive
 
-With a grid system being that adaptable, it was pretty hard to define fixed breakpoints, so I did not. It's up to you to decide what to do about it, with rules such as :
+With a grid system this flexible, it was pretty hard to define fixed breakpoints, so I did not. It's up to you to decide what to do about it, with rules such as :
 
 ```LESS
 @media query screen and (min-width: 9001px) { // OVER NINE THOUSAND
